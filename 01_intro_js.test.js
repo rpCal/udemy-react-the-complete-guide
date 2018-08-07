@@ -5,10 +5,7 @@ describe('first test of jest', () => {
         expect(2).not.toBe(4)
     })
     test('check type', () => {
-        interface Przyklad{
-            age: number
-        }
-        let A:Przyklad = { age: 10 };
-        expect(A).toBeInstanceOf(Przyklad);
+        let A = { age: 10 };
+        expect(A).toHaveProperty("age");
     })
 })
