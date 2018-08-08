@@ -31,6 +31,7 @@ describe("spread operator", () => {
         expect(result).toEqual([1]);
     })
 })
+
 describe("descructing operator", () => {
     test("destructing array", () => {
         let [a,b] = [100, 200, 300, 400];
@@ -44,7 +45,7 @@ describe("descructing operator", () => {
         expect(BigNumber2).toBe(8888888)
     })
     test("destructing object", () => {
-        let { first_name } = { first_name: "Rob", last_name: "C" };
+        let { first_name, ...rest } = { first_name: "Rob", last_name: "C" };
         expect(first_name).toBe("Rob")
     })
     describe('check each props ', () => {
